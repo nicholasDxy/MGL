@@ -4,7 +4,7 @@ from torch import optim
 import torch.nn.functional as functional
 import torch.nn.init as init
 import numpy as np
-from util import load_data
+import load_data
 from collections import defaultdict
 import pandas as pd
 from copy import deepcopy

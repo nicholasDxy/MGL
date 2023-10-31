@@ -1,3 +1,4 @@
+import argparse
 import torch
 import torch.nn as nn
 from torch import optim
@@ -8,7 +9,7 @@ from torch.utils.data import DataLoader
 import numpy as np
 from collections import defaultdict
 
-from models import Model
+from model import Model
 
 import load_data
 
