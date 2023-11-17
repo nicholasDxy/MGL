@@ -21,6 +21,7 @@ from multiprocessing import Pool, cpu_count
 from functools import partial
 from copy import deepcopy
 import pandas as pd
+import evaluate
 
 
 
@@ -102,7 +103,7 @@ def one_train(Data, opt):
 
     test_dataset = Data.test_dataset
     test_loader = DataLoader(
-        test_dataset, shuffle=False, batch_size=opt.batch_size, collate_fn=my_collate_test)
+        test_dataset, shuffle=False, batch_size=opt.batch_size, collate_fn=evaluate.my_collate_test)
 
     device = torch.device("cuda:{0}".format(cuda_device))
 

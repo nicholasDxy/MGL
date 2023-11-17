@@ -8,7 +8,7 @@ from torch.utils.data import DataLoader
 import numpy as np
 from collections import defaultdict
 
-from models import Model
+from model import Model
 from util import metric
 
 import load_data

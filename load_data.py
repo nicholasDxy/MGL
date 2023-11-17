@@ -212,6 +212,7 @@ class Data(object):
 
             else:
                 encoder = LabelEncoder()
+                self.item_feature[f] = self.item_feature[f].astype(str)
                 encoder.fit(self.item_feature[f])
                 self.item_feature[f] = encoder.transform(self.item_feature[f])
                 feature_dim = len(encoder.classes_)
